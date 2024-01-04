@@ -7,7 +7,7 @@
 
 using namespace std;
 
-
+//This adds all the words from dictionary file to graph based on their lengths.
 PuzzleGame::PuzzleGame(string nameOfDictionary) {
 
     string line;
@@ -45,6 +45,7 @@ PuzzleGame::PuzzleGame(string nameOfDictionary) {
     FiveGraph->setWords(FiveWords);
 }
 
+// For initializing bfs
 void PuzzleGame::StartBFS(string startingWord, string endingWord) {
 
     array::Graph *chosenGraph = nullptr;
@@ -88,10 +89,11 @@ void PuzzleGame::StartBFS(string startingWord, string endingWord) {
         }
     }
 
-    chosenGraph->wordBreadthFirstSearch (startingIndex,endingIndex);
+    chosenGraph->puzzleBFS(startingIndex, endingIndex);
 
 }
 
+// it checks if the entered word is exists on dictionary or not.
 bool PuzzleGame::checkExists(string word) {
 
     array::Graph *graph;
@@ -114,7 +116,7 @@ bool PuzzleGame::checkExists(string word) {
     return false;
 }
 
-
+// For initializing dijkstra search for our puzzle game.
 void PuzzleGame::StartDijkstra(string startingWord, string endingWord) {
 
     array::Graph *chosenGraph = nullptr;
@@ -158,7 +160,7 @@ void PuzzleGame::StartDijkstra(string startingWord, string endingWord) {
         }
     }
 
-    chosenGraph->wordBreadthFirstSearch (startIndx, endIndx);
+    chosenGraph->puzzleBFS(startIndx, endIndx);
 
 }
 

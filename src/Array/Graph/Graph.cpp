@@ -95,7 +95,8 @@ namespace array{
         }
     }
 
-    void Graph::wordBreadthFirstSearch(int startNode, int endNode) {
+    //This is breadth first search for our puzzle game
+    void Graph::puzzleBFS(int startNode, int endNode) {
         setlocale(LC_ALL, "Turkish");
         int fromNode;
         Queue queue = Queue(1000);

@@ -32,7 +32,7 @@ namespace array{
 
         void connectWords();
 
-        void wordBreadthFirstSearch(int startNode, int endNode);
+        void puzzleBFS(int startNode, int endNode);
 
     protected:
         void depthFirstSearch(bool* visited, int fromNode) override;
